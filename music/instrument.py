@@ -6,33 +6,7 @@ from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
 from pybricks.parameters import (Port, Stop, Direction, Button, Color,
                                  SoundFile, ImageFile, Align)
 from pybricks.tools import print, wait, StopWatch
-from pybricks.robotics import DriveBase
-
-# return [ 261.63, 'C4' ]        
-# return [ 277.18, 'C#4' ]        
-# return [ 293.66, 'D4' ]        
-# return [ 329.63, 'D#4' ]        
-# return [ 349.23, 'E4' ]        
-# return [ 369.99, 'F4' ]        
-# return [ 392, 'F#4' ]        
-# return [ 415.30, 'G4' ]        
-# return [ 440, 'A4' ]        
-# return [ 466.16, 'A#4' ]        
-# return [ 493.88, 'B4' ]        
-# return [ 523.25, 'C5' ]        
-# return [ 554.37, 'C#5' ]        
-# return [ 587.33, 'D5' ]        
-# return [ 622.25, 'D#5' ]        
-# return [ 659.25, 'E5' ]        
-# return [ 698.46, 'F5' ]        
-# return [ 739.99, 'F#5' ]        
-# return [ 783.99, 'G5' ]        
-# return [ 830.61, 'G#5' ]        
-# return [ 880, 'A5' ]        
-# return [ 932.33, 'A#5' ]        
-# return [ 987.77, 'B5' ]        
-# return [ 1046.5, 'C6' ]   
-
+from pybricks.robotics import DriveBase 
 
 # Write your program here
 tuning_motor = Motor(Port.B)

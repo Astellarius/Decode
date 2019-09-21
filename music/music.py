@@ -1,5 +1,3 @@
-#!/usr/bin/env pybricks-micropython
-
 from pybricks import ev3brick as brick
 from pybricks.tools import print, wait, StopWatch
 
@@ -33,10 +31,11 @@ class Music:
     # Music constructor
 
     def play(self, note, duration = 500):
-        # sixteenth 125
-        # eight 250 
-        # half 1000
-        brick.display.text(note[1], (60, 50))
-        brick.sound.beep(note[0], duration)
+        # Sixteenth 125
+        # Eight 250
+        # Quarter 500 
+        # Half 1000
+        brick.display.text( note[1], ( 60, 50 ) )
+        brick.sound.beep( note[0], duration )
         wait(100)
     # Music play

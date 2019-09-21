@@ -9,16 +9,21 @@ from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
 # Write your program here
+left = Motor(Port.B)
+right = Motor(Port.C)
+robot = DriveBase(left, right, 56, 114)
 
-bass_button = TouchSensor(Port.S1)
-hat_button = TouchSensor(Port.S2)
+left_button = TouchSensor(Port.S1)
+right_button = TouchSensor(Port.S2)
 
-while True:
+while not left_button.pressed() and right_button.pressed():
 
-    if bass_button.pressed():
-        brick.sound.file(SoundFile.HORN_1)
+    robot.drive(100, 0)
 
+    if left_button.pressed():
+        while left_button.pressed():
+            robot.drive(50, 90)
 
-    if hat_button.pressed():
-        brick.sound.file(SoundFile.CLICK)
-
+    if right_button.pressed():
+        while right_button.pressed():
+            robot.drive(50, -90)
