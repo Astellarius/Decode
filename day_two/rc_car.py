@@ -8,13 +8,15 @@ from pybricks.parameters import (Port, Stop, Direction, Button, Color,
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
-# Write your program here
 left = Motor(Port.B)
 right = Motor(Port.C)
 robot = DriveBase(left, right, 56, 114)
 
 left_button = TouchSensor(Port.S1)
 right_button = TouchSensor(Port.S2)
+
+# Remote Control Car
+# Build basic car, use two unattached buttons to control turning. 
 
 while not left_button.pressed() and right_button.pressed():
 

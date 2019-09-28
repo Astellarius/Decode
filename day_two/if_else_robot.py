@@ -8,15 +8,18 @@ from pybricks.parameters import (Port, Stop, Direction, Button, Color,
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
-# Write your program here
-
 left = Motor(Port.B)
 right = Motor(Port.C)
 robot = DriveBase(left, right, 56, 114)
 
+button = TouchSensor(Port.S1)
+
+# If Else Beeping 
+# Build basic car, use two unattached buttons to control turning. 
 
 while True:
 
-    robot.drive(100, 0)
-
-
+    if button.pressed():
+        brick.sound.beep(200)     
+    else: 
+        brick.sound.beep(500)
